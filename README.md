@@ -14,3 +14,9 @@ A few important things to note about my implementation of this. Most importantly
 Second, the filter check being performed is a simple check for a substring in the prefetch file name (which includes the entire path, like "C:\Windows\Prefetch\NET.EXE-hash". This means that if you add "net" to the filter list, it will also block "netstat". This was done on purpose to allow for blocking many programs with a single update, such as any C# tooling with "Sharp" in the name. You can avoid any collateral blockage by including the file extension, ie: "net.exe".
 
 Finally, Prefetch is only one of several methods for tracking program execution in Windows. This won't stop other items, such as Shimcache or normal event logging, from taking place.
+
+## Todo
+Some housekeeping items I'll add in the near future:
+* Remove items from filter list
+* Obtain current items from filter list
+* Add hash calculator for matching on filepath hashes
